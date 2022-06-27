@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021 Razeware LLC
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+  ~ distribute, sublicense, create a derivative work, and/or sell copies of the
+  ~ Software in any work that is designed, intended, or marketed for pedagogical or
+  ~ instructional purposes related to programming, coding, application development,
+  ~ or information technology.  Permission for such use, copying, modification,
+  ~ merger, publication, distribution, sublicensing, creation of derivative works,
+  ~ or sale is expressly withheld.
+  ~
+  ~ This project and source code may use libraries or frameworks that are
+  ~ released under various Open-Source licenses. Use of those libraries and
+  ~ frameworks are governed by their own individual licenses.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<navigation android:id="@+id/nav_graph"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/pets_to_adopt">
+
+  <dialog
+      android:id="@+id/add_pet"
+      android:name="com.raywenderlich.android.petrealm.pets.ui.AddPetFragment"
+      tools:layout="@layout/fragment_add_pet" />
+
+  <fragment
+      android:id="@+id/adopted_pets"
+      android:name="com.raywenderlich.android.petrealm.pets.ui.AdoptedPetsFragment"
+      tools:layout="@layout/fragment_adopted_pets" />
+
+  <fragment
+      android:id="@+id/owners"
+      android:name="com.raywenderlich.android.petrealm.owners.ui.OwnersFragment"
+      tools:layout="@layout/fragment_owners">
+    <action
+      android:id="@+id/action_add_owner"
+      app:destination="@id/add_owner" />
+    <action
+        android:id="@+id/action_update_owner"
+        app:destination="@id/add_owner" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/pets_to_adopt"
+      android:name="com.raywenderlich.android.petrealm.pets.ui.PetsToAdoptFragment"
+      tools:layout="@layout/fragment_pets_to_adopt">
+    <action
+        android:id="@+id/action_add_pet"
+        app:destination="@id/add_pet" />
+    <action
+        android:id="@+id/action_select_owner"
+        app:destination="@id/select_owner">
+      <argument
+        android:name="petId"
+        app:argType="string"
+        app:nullable="false" />
+    </action>
+  </fragment>
+
+  <dialog
+    android:id="@+id/add_owner"
+    android:name="com.raywenderlich.android.petrealm.owners.ui.AddOwnerFragment"
+    tools:layout="@layout/fragment_add_owner" />
+
+  <dialog
+      android:id="@+id/select_owner"
+      android:name="com.raywenderlich.android.petrealm.owners.ui.OwnerSelectionFragment"
+      tools:layout="@layout/fragment_owner_selection">
+    <argument
+        android:name="petId"
+        app:argType="string"
+        app:nullable="false" />
+  </dialog>
+
+</navigation>

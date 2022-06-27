@@ -1,0 +1,90 @@
+<resources>
+  <string name="app_name">PetRealm</string>
+  <string name="pets_to_adopt">Pets to adopt</string>
+  <string name="adopted_pets">Adopted pets</string>
+  <string name="owners">Owners</string>
+  <string name="add_pet_to_adopt">Add pet to adopt</string>
+  <string name="add_owner">Add owner</string>
+
+  <string-array name="pet_types">
+    <item name="bear">Bear</item>
+    <item name="bird">Bird</item>
+    <item name="bug">Bug</item>
+    <item name="cat">Cat</item>
+    <item name="chameleon">Chameleon</item>
+    <item name="cow">Cow</item>
+    <item name="dog">Dog</item>
+    <item name="duck">Duck</item>
+    <item name="fish">Fish</item>
+    <item name="fox">Fox</item>
+    <item name="frog">Frog</item>
+    <item name="monkey">Monkey</item>
+    <item name="octopus">Octopus</item>
+    <item name="owl">Owl</item>
+    <item name="panda">Panda</item>
+    <item name="penguin">Penguin</item>
+    <item name="pig">Pig</item>
+    <item name="rat">Rat</item>
+    <item name="seal">Seal</item>
+    <item name="skunk">Skunk</item>
+    <item name="snake">Snake</item>
+    <item name="spider">Spider</item>
+    <item name="squid">Squid</item>
+    <item name="squirrel">Squirrel</item>
+    <item name="tiger">Tiger</item>
+    <item name="wolf">Wolf</item>
+  </string-array>
+
+  <string-array name="pet_filter">
+    <item name="all">All</item>
+    <item name="bear">Bear</item>
+    <item name="bird">Bird</item>
+    <item name="bug">Bug</item>
+    <item name="cat">Cat</item>
+    <item name="chameleon">Chameleon</item>
+    <item name="cow">Cow</item>
+    <item name="dog">Dog</item>
+    <item name="duck">Duck</item>
+    <item name="fish">Fish</item>
+    <item name="fox">Fox</item>
+    <item name="frog">Frog</item>
+    <item name="monkey">Monkey</item>
+    <item name="octopus">Octopus</item>
+    <item name="owl">Owl</item>
+    <item name="panda">Panda</item>
+    <item name="penguin">Penguin</item>
+    <item name="pig">Pig</item>
+    <item name="rat">Rat</item>
+    <item name="seal">Seal</item>
+    <item name="skunk">Skunk</item>
+    <item name="snake">Snake</item>
+    <item name="spider">Spider</item>
+    <item name="squid">Squid</item>
+    <item name="squirrel">Squirrel</item>
+    <item name="tiger">Tiger</item>
+    <item name="wolf">Wolf</item>
+  </string-array>
+
+  <string name="pet_s_name">Name</string>
+  <string name="age">Age</string>
+  <string name="add_pet">Add Pet</string>
+  <string name="select_the_type_of_pet">Select the type of pet:</string>
+  <string name="name_error">Name cannot be empty</string>
+  <string name="age_error">Age cannot be empty</string>
+  <string name="owned_by">Owner: %s</string>
+
+  <plurals name="age">
+    <item quantity="one">year</item>
+    <item quantity="other">years</item>
+  </plurals>
+  <string name="pet_age">%d %s</string>
+  <string name="adopt_me">Adopt Me</string>
+  <string name="remove">Remove</string>
+  <string name="owner_added">Owner was added</string>
+  <string name="owner_deleted">Owner Removed</string>
+  <string name="pet_adopted">Pet adopted.</string>
+  <string name="pet_added">Pet added.</string>
+  <string name="pet_deleted">Pet removed.</string>
+  <string name="update_owner">Update owner</string>
+  <string name="number_pets">%d pets</string>
+</resources>
